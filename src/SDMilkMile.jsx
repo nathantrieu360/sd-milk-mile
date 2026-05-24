@@ -28,8 +28,8 @@ const styles = `
   --dark2: #E8F4FF;
   --dark3: #DDF0FF;
   --dark4: #CCE8FF;
-  --gray: #5A7A99;
-  --light: #1A3A5C;
+--gray: #2A4A6A;
+--light: #0A2540;
 }
 
   html { scroll-behavior: smooth; }
@@ -55,8 +55,8 @@ const styles = `
     padding: 16px 32px;
     transition: all 0.3s ease;
   }
-  nav.scrolled {
-    background: rgba(10,10,10,0.95);
+ nav.scrolled {
+    background: rgba(240,248,255,0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(212,160,23,0.2);
     padding: 12px 32px;
