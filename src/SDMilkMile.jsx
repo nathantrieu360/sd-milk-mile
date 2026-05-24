@@ -17,20 +17,20 @@ const styles = `
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  :root {
-    --cream: #F5F0E8;
-    --milk: #FEFDF8;
-    --gold: #D4A017;
-    --gold-light: #F0C040;
-    --red: #C41230;
-    --red-dark: #8B0A1E;
-    --dark: #0A0A0A;
-    --dark2: #111111;
-    --dark3: #1A1A1A;
-    --dark4: #242424;
-    --gray: #888888;
-    --light: #EEEEEE;
-  }
+ :root {
+  --cream: #FFFFFF;
+  --milk: #F0F8FF;
+  --gold: #2A7FD4;
+  --gold-light: #4FA8F0;
+  --red: #1A6BB5;
+  --red-dark: #0F4F8A;
+  --dark: #F0F8FF;
+  --dark2: #E8F4FF;
+  --dark3: #DDF0FF;
+  --dark4: #CCE8FF;
+  --gray: #5A7A99;
+  --light: #1A3A5C;
+}
 
   html { scroll-behavior: smooth; }
 
