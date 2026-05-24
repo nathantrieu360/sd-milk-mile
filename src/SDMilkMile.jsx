@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
-const img1 = "/1.png";
-const img2 = "/2.png";
-const img3 = "/3.png";
-const img4 = "/4.png";
-const img5 = "/5.png";
-const img6 = "/6.png";
+const BASE = "https://raw.githubusercontent.com/nathantrieu360/sd-milk-mile/main/";
+const img1 = BASE + "1.png";
+const img2 = BASE + "2.png";
+const img3 = BASE + "3.png";
+const img4 = BASE + "4.png";
+const img5 = BASE + "5.png";
+const img6 = BASE + "6.png";
 
 const SIGNUP_URL = "https://surveymars.com/q/39k0UDDh5";
 const IG_URL = "https://www.instagram.com/sd.milk.mile.association?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
