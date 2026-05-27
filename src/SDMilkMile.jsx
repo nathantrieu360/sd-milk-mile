@@ -954,7 +954,7 @@ export default function SDMilkMile() {
             {[
               {rank:"1",name:"Gunner Silva",school:"Classical Academy"},
               {rank:"2",name:"Timothy Akinpelu",school:"Del Norte"},
-              {rank:"3",name:"Joshua Rocha",school:"Poway"},
+              {rank:"3",name:"Alex Boles",school:"Del Norte"},
             ].map((s) => (
               <div key={s.rank} style={{display:"flex",alignItems:"center",gap:"16px",padding:"12px 0",borderBottom:"1px solid rgba(42,127,212,0.08)"}}>
                 <div style={{fontFamily:"'Bebas Neue'",fontSize:"22px",color:"var(--blue)",minWidth:"28px"}}>#{s.rank}</div>
