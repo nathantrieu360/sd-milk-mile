@@ -953,8 +953,8 @@ export default function SDMilkMile() {
             <div style={{fontFamily:"'Barlow Condensed'",fontSize:"12px",fontWeight:700,letterSpacing:"0.25em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"20px"}}>🏃 Top Seeds — 2026</div>
             {[
               {rank:"1",name:"Gunner Silva",school:"Classical Academy"},
-              {rank:"2",name:"Timothy Akinpelu",school:"Del Norte"},
-              {rank:"3",name:"Alex Boles",school:"Del Norte"},
+              {rank:"2",name:"Cade Willhoit",school:"Del Norte"},
+              {rank:"3",name:"Timothy Akinpelu",school:"Del Norte"},
             ].map((s) => (
               <div key={s.rank} style={{display:"flex",alignItems:"center",gap:"16px",padding:"12px 0",borderBottom:"1px solid rgba(42,127,212,0.08)"}}>
                 <div style={{fontFamily:"'Bebas Neue'",fontSize:"22px",color:"var(--blue)",minWidth:"28px"}}>#{s.rank}</div>
