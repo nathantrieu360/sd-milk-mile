@@ -904,7 +904,7 @@ export default function SDMilkMile() {
               ))}
               <div className="lb-empty fade-up stagger-2">
                 <div className="lb-empty-text font-display">Your Name Here</div>
-                <div className="lb-empty-sub">June 23, 2026 · Rancho Bernardo High School</div>
+                <div className="lb-empty-sub">June 23, 2026 · Del Norte High School</div>
               </div>
             </div>
           ))}
@@ -928,7 +928,7 @@ export default function SDMilkMile() {
           <div className="section-label fade-up">Event Details</div>
           <h2 className="section-title font-display fade-up">2nd Annual<br />Summer Race</h2>
           <div className="event-grid fade-up">
-            {[["📅","Date","June 23, 2026","Monday Evening"],["🕖","Start Time","6:45 PM","Warm-ups at 6:30"],["📍","Venue","Rancho Bernardo HS","13010 Paseo Lucido, SD"],["🎫","Bib Pickup","June 20–22","Del Norte HS Student Lot"],["👥","Participants","15","First 15 to sign up enter to win a Fleet Feet gift card!"]].map(([icon,label,value,sub]) => (
+            {[["📅","Date","June 23, 2026","Monday Evening"],["🕖","Start Time","6:45 PM","Warm-ups at 6:30"],["📍","Venue","Del Norte HS","16601 Nighthawk Ln, SD"],["🎫","Bib Pickup","June 23","Del Norte HS "],["👥","Participants","17","First 15 to sign up enter to win a Fleet Feet gift card!"]].map(([icon,label,value,sub]) => (
               <div className="event-card" key={label}>
                 <div className="event-card-icon">{icon}</div>
                 <div className="event-card-label font-condensed">{label}</div>
