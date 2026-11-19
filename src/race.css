@@ -42,7 +42,7 @@ h1 em { color: var(--lime); }
 .race-photo img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
 .race-photo::after, .next::before { content: ''; position: absolute; pointer-events: none; background: repeating-linear-gradient(-61deg, transparent 0 13px, currentColor 14px 16px); }
 .race-photo::after { inset: 0 auto 0 0; width: 36px; color: var(--paper); }
-.recap { display: grid; grid-template-columns: 2fr repeat(3, 1fr); background: var(--track); color: white; gap: 1.25rem; padding-top: 1.45rem; padding-bottom: 1.45rem; }
+.recap { display: grid; grid-template-columns: 2fr repeat(2, 1fr); background: var(--track); color: white; gap: 1.25rem; padding-top: 1.45rem; padding-bottom: 1.45rem; }
 .recap span, .recap strong, td small, th small { display: block; }
 .recap strong { margin-top: .25rem; }
 .wrap { width: min(90%, 1240px); margin: auto; padding: clamp(3rem, 6vw, 6rem) 0; }
@@ -76,6 +76,7 @@ footer { background: var(--ink); color: white; flex-wrap: wrap; }
   .race-photo { height: clamp(13rem, 54vw, 22rem); }
   .race-photo img { object-position: 50% 35%; }
   .recap, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .recap > :first-child { grid-column: 1 / -1; }
   .next { flex-wrap: wrap; }
   .brand { font-size: .85rem; gap: .3rem; }
   .brand img { width: 1.9rem; }
