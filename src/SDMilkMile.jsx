@@ -42,6 +42,7 @@ export default function SDMilkMile() {
           <p className="label">San Diego Milk Mile Association</p>
           <h1 id="race-title">SD Milk<br/><em>Mile.</em></h1>
           <p className="distance">4 laps <span>/</span> 4 milks <span>/</span> 1 mile</p>
+          <p className="charity-notice"><strong>100% of race fees</strong> go to charity.</p>
           <div className="actions"><a className="button" href="#leaderboard">Race results ↓</a><a className="text-link" href="#next">2027 race info</a></div>
         </div>
         <div className="race-photo"><img src={racing} alt="Milk Mile runner taking the curve on a red track" /></div>
@@ -64,7 +65,11 @@ export default function SDMilkMile() {
               </tr>)}</tbody>
           </table>)}</div>
       </section>
-      <section className="next" id="next"><div><p className="label">2027 Milk Mile</p><h2>Coming soon</h2></div>
+      <section className="next" id="next"><div>
+          <p className="label">2027 Milk Mile</p>
+          <h2>Coming soon</h2>
+          <p className="next-details">For the 2027 race, you’ll be able to pay digitally, get a digital receipt, and sign up for event updates by text.</p>
+        </div>
         <a className="text-link" href={instagram}>Follow race updates ↗</a>
       </section>
       <section className="wrap" id="gallery">
