@@ -68,6 +68,10 @@ export default function SDMilkMile() {
           <p className="label">2027 Milk Mile</p>
           <h2>Coming soon</h2>
           <p className="next-details">For the 2027 race, you’ll be able to pay digitally, get a digital receipt, and sign up for event updates by text.</p>
+          <div className="actions">
+            <a className="button" href="https://buy.stripe.com/test_4gM28k90ccKV03J5sv6Ri00">Try test checkout ↗</a>
+          </div>
+          <p className="next-details">Demo only. No payment is collected or race entry reserved.</p>
         </div>
         <a className="text-link" href={instagram}>Follow race updates ↗</a>
       </section>
