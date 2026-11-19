@@ -59,9 +59,10 @@ tbody tr { border-bottom: 1px solid #c9cbc0; }
 tbody tr:first-child { background: #eff5d7; }
 td { font: bold 1.15rem monospace; }
 td small, th small { font: 400 .8rem/1.5 Arial, sans-serif; }
-.next { position: relative; background: var(--ink); color: white; padding-top: 2.8rem; padding-bottom: 2.8rem; overflow: hidden; }
+.next { flex-wrap: wrap; position: relative; background: var(--ink); color: white; padding-top: 2.8rem; padding-bottom: 2.8rem; overflow: hidden; }
 .next::before { color: var(--lime); top: 0; bottom: 0; left: 0; width: 2.5vw; }
 .next .label, .next .text-link { color: var(--lime); }
+.ticket-panel { flex: 0 0 100%; min-width: 0; background: var(--paper); color: var(--ink); padding: 1rem; }
 .next h2 { margin-top: .35rem; }
 .section-head { margin-bottom: 1.5rem; flex-wrap: wrap; }
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }

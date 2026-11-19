@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import './race.css';
 import preRace from '../1.png';
 import racing from '../2.png';
@@ -29,6 +30,40 @@ const gallery = [
   [champion, 'Runner holding up his medal'], [milk, 'Runner drinking milk'],
   [fuel, 'Runner at the milk station'], [setup, 'Race supplies beside the track'],
 ];
+
+const boxOffice = 'https://www.tickettailor.com/all-tickets/sdmilkmileassociation/?ref=website_widget&show_search_filter=true&show_date_filter=true&show_sort=true';
+
+function TicketWidget() {
+  const container = useRef(null);
+
+  useEffect(() => {
+    const root = container.current;
+    const script = document.createElement('script');
+    script.src = 'https://cdn.tickettailor.com/js/widgets/min/widget.js';
+    Object.assign(script.dataset, {
+      url: boxOffice,
+      type: 'inline',
+      inlineMinimal: 'true',
+      inlineShowLogo: 'false',
+      inlineBgFill: 'true',
+      inlineInheritRefFromUrlParam: '',
+      inlineRef: 'website_widget',
+    });
+    // Schedule once after React's development-only effect replay.
+    const timer = window.setTimeout(() => root.appendChild(script), 0);
+    return () => {
+      window.clearTimeout(timer);
+      script.remove();
+    };
+  }, []);
+
+  return <div className="tt-widget" ref={container}>
+    <div className="tt-widget-fallback"><p>
+      <a href={boxOffice} target="_blank" rel="noopener">Click here to buy tickets</a><br />
+      <small><a href="https://www.tickettailor.com?rf=wdg_359764" className="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small>
+    </p></div>
+  </div>;
+}
 
 export default function SDMilkMile() {
   return <>
@@ -68,12 +103,10 @@ export default function SDMilkMile() {
           <p className="label">2027 Milk Mile</p>
           <h2>Coming soon</h2>
           <p className="next-details">For the 2027 race, you’ll be able to pay digitally, get a digital receipt, and sign up for event updates by text.</p>
-          <div className="actions">
-            <a className="button" href="https://buy.stripe.com/test_4gM28k90ccKV03J5sv6Ri00">Try test checkout ↗</a>
-          </div>
-          <p className="next-details">Demo only. No payment is collected or race entry reserved.</p>
+
         </div>
         <a className="text-link" href={instagram}>Follow race updates ↗</a>
+        <div className="ticket-panel"><TicketWidget /></div>
       </section>
       <section className="wrap" id="gallery">
         <div className="section-head"><h2>Race photos</h2><a className="button" href={album}>2026 photos on Instagram ↗</a></div>
