@@ -62,7 +62,10 @@ td small, th small { font: 400 .8rem/1.5 Arial, sans-serif; }
 .next { flex-wrap: wrap; position: relative; background: var(--ink); color: white; padding-top: 2.8rem; padding-bottom: 2.8rem; overflow: hidden; }
 .next::before { color: var(--lime); top: 0; bottom: 0; left: 0; width: 2.5vw; }
 .next .label, .next .text-link { color: var(--lime); }
-.ticket-panel { flex: 0 0 100%; min-width: 0; background: var(--paper); color: var(--ink); padding: 1rem; }
+.registration-actions { display: grid; gap: .8rem; justify-items: start; }
+.registration-actions .text-link { font-size: .85rem; }
+.race-schedule { margin-top: .7rem; font-weight: 700; }
+.next .next-details { margin-top: .4rem; font-size: .9rem; }
 .next h2 { margin-top: .35rem; }
 .section-head { margin-bottom: 1.5rem; flex-wrap: wrap; }
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
