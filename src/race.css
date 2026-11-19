@@ -63,6 +63,7 @@ td small, th small { font: 400 .8rem/1.5 Arial, sans-serif; }
 .next::before { color: var(--lime); top: 0; bottom: 0; left: 0; width: 2.5vw; }
 .next .label, .next .text-link { color: var(--lime); }
 .registration-actions { display: grid; gap: .8rem; justify-items: start; }
+.entry-charity { max-width: 36ch; font-size: .9rem; line-height: 1.45; }
 .registration-actions .text-link { font-size: .85rem; }
 .race-schedule { margin-top: .7rem; font-weight: 700; }
 .next .next-details { margin-top: .4rem; font-size: .9rem; }

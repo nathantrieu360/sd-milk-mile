@@ -34,8 +34,8 @@ const gallery = [
 ];
 
 const registrationSteps = [
-  { photo: paymentPhoto, title: 'Register online', detail: 'Choose a race entry and pay $22.50 at checkout.' },
-  { photo: ticketPhoto, title: 'Save your ticket', detail: 'Look for your ticket in your confirmation email. Keep it handy for race day.' },
+  { photo: paymentPhoto, title: 'Register online', detail: 'One $22.50 entry covers one runner, a race bib, and milk for all four laps.' },
+  { photo: ticketPhoto, title: 'Save your ticket', detail: 'Show the ticket from your confirmation email at bib pickup. On iPhone, tap Add to Apple Wallet if it appears in the email.' },
   { photo: checkInPhoto, title: 'Pick up your bib', detail: 'Show the ticket code on your phone so a volunteer can scan it and hand you your bib.' },
 ];
 
@@ -94,6 +94,7 @@ export default function SDMilkMile() {
         </div>
         <div className="registration-actions">
           <a className="button" href={raceUrl} onClick={openRegistration}>Register · $22.50</a>
+          <p className="entry-charity">Your full $22.50 entry fee goes to Ronald McDonald House Charities. We cover processing fees.</p>
           <a className="text-link" href={instagram}>Follow race updates ↗</a>
         </div>
         <div className="registration-guide">
