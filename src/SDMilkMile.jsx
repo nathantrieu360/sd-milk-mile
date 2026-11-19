@@ -51,7 +51,6 @@ export default function SDMilkMile() {
         <div><span>2026 race recap</span><strong>June 23 · Village Green Park</strong></div>
         <div><span>Field size</span><strong>20 runners</strong></div>
         <div><span>Raised for RMHC</span><strong>$350</strong></div>
-        <div><span>Race sponsor</span><strong>Fleet Feet</strong></div>
       </section>
       <section className="wrap" id="leaderboard">
         <h2>Race results</h2>
