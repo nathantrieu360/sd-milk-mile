@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 
-const BASE = "https://raw.githubusercontent.com/nathantrieu360/sd-milk-mile/main/";
-const img1 = BASE + "1.png";
-const img2 = BASE + "2.png";
-const img3 = BASE + "3.png";
-const img4 = BASE + "4.png";
-const img5 = BASE + "5.png";
-const img6 = BASE + "6.png";
+import preRace from "../1.png";
+import speedWork from "../2.png";
+import medalCeremony from "../3.png";
+import logo from "../4.png";
+import groupRun from "../6.png";
+import champion from "../7.webp";
+import milk from "../8.webp";
+import fuelingUp from "../9.webp";
+import raceSetup from "../10.webp";
 
-const SIGNUP_URL = "https://surveymars.com/q/39k0UDDh5";
 const IG_URL = "https://www.instagram.com/sd.milk.mile.association?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const YT_URL = "https://youtu.be/DXD_yoVHPec";
 
@@ -177,7 +178,7 @@ const styles = `
     top: 0;
     width: 55%;
     height: 100%;
-    background-image: url(${img6});
+    background-image: url(${groupRun});
     background-size: cover;
     background-position: center top;
     mask-image: linear-gradient(to left, rgba(0,0,0,0.7) 50%, transparent 100%);
@@ -683,14 +684,19 @@ const TICKER_ITEMS = [
   "SD Milk Mile Association",
   "2nd Annual Summer 2026",
   "Ronald McDonald House Charity",
-  "June 23 · RB High School",
+  "June 23 · Village Green Park",
   "Medals for Top 3",
-  "$22.50 Entry",
+  "$350 Raised for RMHC",
   "Real Athletes. Actual Milk.",
   "No Lactose Tolerance Required",
 ];
 
 const leaderboard = {
+  2026: [
+    { rank: 1, name: "Ryan Polk", school: "Mira Mesa High School" },
+    { rank: 2, name: "Jayden Moffit", school: "Rancho Bernardo High School" },
+    { rank: 3, name: "Josh Porter", school: "San Marcos High School" },
+  ],
   2025: [
     { rank: 1, name: "Cooper Castleberry", school: "Poway", time: "5:33", badge: "CR" },
   ],
@@ -775,10 +781,10 @@ export default function SDMilkMile() {
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#leaderboard">Leaderboard</a></li>
-          <li><a href="#event">Event Info</a></li>
+          <li><a href="#event">Race Recap</a></li>
           <li><a href="#gallery">Gallery</a></li>
         </ul>
-        <a href={SIGNUP_URL} target="_blank" rel="noreferrer" className="nav-cta">Sign Up</a>
+        <a href="#leaderboard" className="nav-cta">Results</a>
       </nav>
 
       <div className="hero">
@@ -804,11 +810,11 @@ export default function SDMilkMile() {
             <strong>4 laps. 4 milks. One legendary race.</strong>
           </p>
           <div className="hero-buttons">
-            <a href={SIGNUP_URL} target="_blank" rel="noreferrer" className="btn-primary">🎽 Register Now — $22.50</a>
+            <a href="#leaderboard" className="btn-primary">2026 Race Results</a>
             <a href={IG_URL} target="_blank" rel="noreferrer" className="btn-secondary">📷 @sd.milk.mile.association</a>
           </div>
           <div className="hero-stats">
-            {[["2nd","Annual Event"],["June 23","Race Day 2026"],["$600","Charity Goal (RMHC)"],["4×","Milk Per Racer"],["12","Participants Registered"]].map(([n,l]) => (
+            {[["2nd","Annual Event"],["June 23","Race Day 2026"],["$350","Raised for RMHC"],["4×","Milk Per Racer"],["20","Participants"]].map(([n,l]) => (
               <div className="hero-stat" key={l}>
                 <span className="hero-stat-num font-display">{n}</span>
                 <span className="hero-stat-label font-condensed">{l}</span>
@@ -817,7 +823,7 @@ export default function SDMilkMile() {
           </div>
         </div>
 
-        <img src={img4} alt="SD Milk Mile Logo" className="hero-logo-badge" />
+        <img src={logo} alt="SD Milk Mile Logo" className="hero-logo-badge" />
         <div className="hero-scroll-hint">
           <span>Scroll</span>
           <div className="scroll-line" />
@@ -867,15 +873,15 @@ export default function SDMilkMile() {
                   <div className="charity-desc">Every entry supports RMHC San Diego — families who need it most.</div>
                 </div>
                 <div className="charity-goal">
-                  <div className="charity-amount font-display">$600</div>
-                  <div className="charity-goal-label">2026 Goal</div>
+                  <div className="charity-amount font-display">$350</div>
+                  <div className="charity-goal-label">Raised in 2026</div>
                 </div>
               </div>
             </div>
             <div className="about-photos fade-up stagger-1">
-              <div className="about-photo"><img src={img6} alt="Runners on track" /><div className="about-photo-label">Race Day Action</div></div>
-              <div className="about-photo"><img src={img2} alt="Runner mid-race" /><div className="about-photo-label">Full Send</div></div>
-              <div className="about-photo"><img src={img3} alt="Finisher with medal" /><div className="about-photo-label">Glory</div></div>
+              <div className="about-photo"><img src={groupRun} alt="Runners on track" /><div className="about-photo-label">Race Day Action</div></div>
+              <div className="about-photo"><img src={speedWork} alt="Runner mid-race" /><div className="about-photo-label">Full Send</div></div>
+              <div className="about-photo"><img src={medalCeremony} alt="Finisher with medal" /><div className="about-photo-label">Glory</div></div>
             </div>
           </div>
         </div>
@@ -884,10 +890,10 @@ export default function SDMilkMile() {
       <section className="leaderboard-section" id="leaderboard">
         <div className="section-inner">
           <div className="fade-up">
-            <div className="section-label">All-Time Records</div>
+            <div className="section-label">Race Results</div>
             <h2 className="section-title font-display">Leader<br />Board</h2>
           </div>
-          {Object.entries(leaderboard).map(([year, runners]) => (
+          {Object.entries(leaderboard).reverse().map(([year, runners]) => (
             <div key={year} className="lb-container fade-up">
               <div className="lb-year-tag font-display">{year}</div>
               <div style={{fontFamily:"'Barlow Condensed'",fontSize:"12px",fontWeight:700,letterSpacing:"0.2em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"16px"}}>{year} Season</div>
@@ -898,14 +904,10 @@ export default function SDMilkMile() {
                     <div className="lb-name font-condensed">{r.name}</div>
                     <div className="lb-school">{r.school}</div>
                   </div>
-                  <div className="lb-time font-display">{r.time}</div>
+                  {r.time && <div className="lb-time font-display">{r.time}</div>}
                   {r.badge && <div className="lb-badge font-condensed">{r.badge}</div>}
                 </div>
               ))}
-              <div className="lb-empty fade-up stagger-2">
-                <div className="lb-empty-text font-display">Your Name Here</div>
-                <div className="lb-empty-sub">June 23, 2026 · Del Norte High School</div>
-              </div>
             </div>
           ))}
         </div>
@@ -925,56 +927,22 @@ export default function SDMilkMile() {
 
       <section className="event-section" id="event">
         <div className="section-inner">
-          <div className="section-label fade-up">Event Details</div>
+          <div className="section-label fade-up">2026 Race Recap</div>
           <h2 className="section-title font-display fade-up">2nd Annual<br />Summer Race</h2>
           <div className="event-grid fade-up">
-            {[["📅","Date","June 23, 2026","Monday Evening"],["🕖","Start Time","6:45 PM","Warm-ups at 6:30"],["📍","Venue","Del Norte HS","16601 Nighthawk Ln, SD"],["🎫","Bib Pickup","June 23","Del Norte HS "],["👥","Participants","17","First 15 to sign up enter to win a Fleet Feet gift card!"]].map(([icon,label,value,sub]) => (
+            {[
+              ["📅", "Date", "June 23, 2026"],
+              ["📍", "Venue", "Village Green Park"],
+              ["👥", "Participants", "20"],
+              ["🏠", "Raised for RMHC", "$350"],
+              ["👟", "Sponsor", "Fleet Feet"],
+            ].map(([icon,label,value]) => (
               <div className="event-card" key={label}>
                 <div className="event-card-icon">{icon}</div>
                 <div className="event-card-label font-condensed">{label}</div>
                 <div className="event-card-value font-display">{value}</div>
-                <div className="event-card-sub">{sub}</div>
               </div>
             ))}
-          </div>
-          <div className="pricing-cards fade-up">
-            <div className="pricing-card">
-              <div className="pricing-name font-condensed">Race Entry</div>
-              <div className="pricing-price font-display"><span>$</span>22.50</div>
-              <div className="pricing-desc">Entry only · Race bib · Certified bragging rights</div>
-            </div>
-            <div className="pricing-card featured">
-              <div className="pricing-name font-condensed">Entry + Swag Bag</div>
-              <div className="pricing-price font-display"><span>$</span>25</div>
-              <div className="pricing-desc">Entry + exclusive swag bag · Best value for the culture</div>
-            </div>
-          </div>
-          <div className="top-seeds fade-up" style={{marginBottom:"32px",background:"linear-gradient(135deg,#EEF7FF,white)",border:"1.5px solid rgba(42,127,212,0.2)",borderRadius:"8px",padding:"28px",boxShadow:"0 4px 16px rgba(42,127,212,0.08)"}}>
-            <div style={{fontFamily:"'Barlow Condensed'",fontSize:"12px",fontWeight:700,letterSpacing:"0.25em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"20px"}}>🏃 Top Seeds — 2026</div>
-            {[
-              {rank:"1",name:"Gunner Silva",school:"Classical Academy"},
-              {rank:"2",name:"Cade Willhoit",school:"Mission Vista"},
-              {rank:"3",name:"Timothy Akinpelu",school:"Del Norte"},
-            ].map((s) => (
-              <div key={s.rank} style={{display:"flex",alignItems:"center",gap:"16px",padding:"12px 0",borderBottom:"1px solid rgba(42,127,212,0.08)"}}>
-                <div style={{fontFamily:"'Bebas Neue'",fontSize:"22px",color:"var(--blue)",minWidth:"28px"}}>#{s.rank}</div>
-                <div style={{flex:1}}>
-                  <div style={{fontFamily:"'Barlow Condensed'",fontSize:"19px",fontWeight:700,color:"var(--navy)",letterSpacing:"0.03em"}}>{s.name}</div>
-                  <div style={{fontSize:"13px",color:"var(--gray)"}}>{s.school}</div>
-                </div>
-
-              </div>
-            ))}
-          </div>
-          <div className="awards-list fade-up">
-            <div style={{fontFamily:"'Barlow Condensed'",fontSize:"14px",fontWeight:700,letterSpacing:"0.2em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"16px"}}>Awards</div>
-            {[["🥇","1st Place — Gold Medal"],["🥈","2nd Place — Silver Medal"],["🥉","3rd Place — Bronze Medal"],["🏅","All finishers — eternal respect"]].map(([medal,text]) => (
-              <div className="award-item font-condensed" key={text}><span className="award-medal">{medal}</span>{text}</div>
-            ))}
-          </div>
-          <div style={{textAlign:"center",marginTop:"48px"}} className="fade-up">
-            <a href={SIGNUP_URL} target="_blank" rel="noreferrer" className="btn-primary" style={{display:"inline-flex",fontSize:"22px",padding:"18px 48px"}}>🥛 Register Now</a>
-            <p style={{marginTop:"16px",fontSize:"13px",color:"var(--gray)"}}>Sign up via link in bio · @sd.milk.mile.association · Cash payment on bib pickup days</p>
           </div>
         </div>
       </section>
@@ -985,20 +953,12 @@ export default function SDMilkMile() {
           <h2 className="section-title font-display fade-up" style={{marginBottom:"32px"}}>Race Day<br />Moments</h2>
         </div>
         <div className="gallery-grid fade-up" style={{maxWidth:"1200px",margin:"0 auto"}}>
-          {[[img6,"Group Run"],[img1,"Pre-Race"],[img2,"Speed Work"],[img3,"Medal Ceremony"],[BASE+"7.png","Champion"],[BASE+"8.png","The Milk"],[BASE+"9.png","Fueling Up"],[BASE+"10.png","Race Day Setup"]].map(([src,tag],i) => (
+          {[[groupRun,"Group Run"],[preRace,"Pre-Race"],[speedWork,"Speed Work"],[medalCeremony,"Medal Ceremony"],[champion,"Champion"],[milk,"The Milk"],[fuelingUp,"Fueling Up"],[raceSetup,"Race Day Setup"]].map(([src,tag],i) => (
             <div className="gallery-item" key={i}>
-              <img src={src} alt={tag} />
+              <img loading="lazy" src={src} alt={tag} />
               <div className="gallery-item-overlay"><span className="gallery-item-tag font-condensed">{tag}</span></div>
             </div>
           ))}
-        </div>
-        <div className="fade-up" style={{maxWidth:"1200px",margin:"16px auto 0",background:"linear-gradient(135deg,#EEF7FF,white)",border:"1.5px solid rgba(42,127,212,0.2)",borderRadius:"8px",padding:"28px 32px",display:"flex",alignItems:"center",gap:"24px",boxShadow:"0 4px 16px rgba(42,127,212,0.08)"}}>
-          <div style={{fontSize:"40px"}}>📸</div>
-          <div>
-            <div style={{fontFamily:"'Barlow Condensed'",fontSize:"12px",fontWeight:700,letterSpacing:"0.25em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"6px"}}>Official Photography</div>
-            <div style={{fontFamily:"'Bebas Neue'",fontSize:"26px",color:"var(--navy)",letterSpacing:"0.04em",marginBottom:"4px"}}>Professional Photographer On-Site</div>
-            <div style={{fontSize:"14px",color:"var(--gray)",lineHeight:1.6}}>A professional photographer will be present at the 2nd Annual SD Summer Milk Mile. Race day photos will be shared after the event via our Instagram <span style={{color:"var(--blue)",fontWeight:600}}>@sd.milk.mile.association</span>. Tag us in your posts!</div>
-          </div>
         </div>
       </section>
 
@@ -1008,7 +968,7 @@ export default function SDMilkMile() {
           <h2 className="section-title font-display fade-up" style={{textAlign:"center"}}>Stay in the<br />Loop</h2>
           <p style={{color:"rgba(255,255,255,0.5)",fontSize:"17px",maxWidth:"520px",margin:"0 auto 40px",textAlign:"center"}} className="fade-up">Race updates, results, footage, and pure unfiltered milk mile content.</p>
           <div className="social-links fade-up">
-            <a href={SIGNUP_URL} target="_blank" rel="noreferrer" className="social-btn primary font-display">🎽 Register for June 23</a>
+            <a href="#leaderboard" className="social-btn primary font-display">2026 Race Results</a>
             <a href={IG_URL} target="_blank" rel="noreferrer" className="social-btn font-display">📷 Instagram</a>
             <a href={YT_URL} target="_blank" rel="noreferrer" className="social-btn font-display">▶ YouTube</a>
           </div>
@@ -1022,8 +982,7 @@ export default function SDMilkMile() {
         <div className="footer-links">
           <a href="#about">About</a>
           <a href="#leaderboard">Leaderboard</a>
-          <a href="#event">Event Info</a>
-          <a href={SIGNUP_URL} target="_blank" rel="noreferrer">Register</a>
+          <a href="#event">Race Recap</a>
           <a href={IG_URL} target="_blank" rel="noreferrer">Instagram</a>
           <a href={YT_URL} target="_blank" rel="noreferrer">YouTube</a>
         </div>
