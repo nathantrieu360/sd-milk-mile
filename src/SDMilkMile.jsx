@@ -1,4 +1,7 @@
 import './race.css';
+import paymentPhoto from './assets/race-payment.webp';
+import ticketPhoto from './assets/race-ticket.webp';
+import checkInPhoto from './assets/bib-pickup.webp';
 import preRace from '../1.png';
 import racing from '../2.png';
 import medal from '../3.png';
@@ -28,6 +31,12 @@ const gallery = [
   [racing, 'Runner rounding the track'], [medal, 'Finisher wearing a medal'],
   [champion, 'Runner holding up his medal'], [milk, 'Runner drinking milk'],
   [fuel, 'Runner at the milk station'], [setup, 'Race supplies beside the track'],
+];
+
+const registrationSteps = [
+  { photo: paymentPhoto, title: 'Register online', detail: 'Choose a race entry and pay $22.50 at checkout.' },
+  { photo: ticketPhoto, title: 'Save your ticket', detail: 'Look for your ticket in your confirmation email. Keep it handy for race day.' },
+  { photo: checkInPhoto, title: 'Pick up your bib', detail: 'Show the ticket code on your phone so a volunteer can scan it and hand you your bib.' },
 ];
 
 const raceEventId = 2543672;
@@ -81,11 +90,20 @@ export default function SDMilkMile() {
           <p className="label">2027 registration</p>
           <h2 id="next-title">Summer Milk Mile</h2>
           <p className="race-schedule"><time dateTime="2027-06-19T18:00:00-07:00">Sat, June 19 · 6:00 PM</time> · 4S Ranch</p>
-          <p className="next-details">Pay online, get a digital receipt, and sign up for race updates by text.</p>
+          <p className="next-details">Digital receipts and optional race updates by text.</p>
         </div>
         <div className="registration-actions">
           <a className="button" href={raceUrl} onClick={openRegistration}>Register · $22.50</a>
           <a className="text-link" href={instagram}>Follow race updates ↗</a>
+        </div>
+        <div className="registration-guide">
+          <h3>How registration works</h3>
+          <ol>{registrationSteps.map(({ photo, title, detail }) =>
+            <li key={title}>
+              <img src={photo} alt="" loading="lazy" width="112" height="112" />
+              <div><strong>{title}</strong><p>{detail}</p></div>
+            </li>
+          )}</ol>
         </div>
       </section>
       <section className="wrap" id="gallery">

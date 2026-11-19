@@ -67,6 +67,16 @@ td small, th small { font: 400 .8rem/1.5 Arial, sans-serif; }
 .race-schedule { margin-top: .7rem; font-weight: 700; }
 .next .next-details { margin-top: .4rem; font-size: .9rem; }
 .next h2 { margin-top: .35rem; }
+.registration-guide { flex: 0 0 100%; border-top: 1px solid #59625a; padding-top: 1.2rem; margin-top: .5rem; }
+.registration-guide h3 { font-size: 1.25rem; letter-spacing: -.025em; }
+.registration-guide ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 0; padding: 0; list-style: none; }
+.registration-guide li { display: flex; align-items: center; gap: .85rem; }
+.registration-guide img { width: clamp(3.5rem, 6vw, 5rem); height: auto; aspect-ratio: 1; object-fit: cover; }
+.registration-guide strong { font-size: 1rem; }
+.registration-guide p { margin-top: .3rem; color: #d9ded9; font-size: .9rem; line-height: 1.45; }
+@media (max-width: 850px) {
+  .registration-guide ol { grid-template-columns: 1fr; gap: .9rem; }
+}
 .section-head { margin-bottom: 1.5rem; flex-wrap: wrap; }
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
 .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; }
