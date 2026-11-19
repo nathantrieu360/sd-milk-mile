@@ -97,3 +97,11 @@ footer { background: var(--ink); color: white; flex-wrap: wrap; }
   .brand img { width: 1.9rem; }
   .nav-links { gap: .65rem; }
 }
+.sms-box { flex: 1 1 100%; border-top: 1px solid #59625a; padding-top: 1.25rem; }
+.sms-box form { display: grid; gap: .65rem; max-width: 32rem; }
+.sms-box input:not([type=checkbox]) { padding: .7rem; font: inherit; max-width: 20rem; width: 100%; }
+.sms-consent, .sms-controls { display: flex; align-items: baseline; gap: .65rem; }
+.sms-controls { flex-wrap: wrap; align-items: center; }
+.sms-controls button { cursor: pointer; }
+.sms-controls button[type=button] { background: none; color: white; border: 0; text-decoration: underline; }
+.sms-box p:not(:empty) { margin-top: .65rem; }

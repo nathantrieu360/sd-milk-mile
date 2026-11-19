@@ -1,3 +1,4 @@
+import RaceUpdates from './RaceUpdates';
 import './race.css';
 import paymentPhoto from './assets/race-payment.webp';
 import ticketPhoto from './assets/race-ticket.webp';
@@ -106,6 +107,7 @@ export default function SDMilkMile() {
             </li>
           )}</ol>
         </div>
+        <RaceUpdates />
       </section>
       <section className="wrap" id="gallery">
         <div className="section-head"><h2>Race photos</h2><a className="button" href={album}>2026 photos on Instagram ↗</a></div>
