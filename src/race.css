@@ -127,5 +127,4 @@ main { flex: 1; }
   nav { flex-wrap: wrap; row-gap: .55rem; }
   .nav-links { order: 1; width: 100%; justify-content: space-between; }
   .nav-links a { padding: .45rem 0; }
-  .nav-register { padding: .5rem .8rem; }
 }

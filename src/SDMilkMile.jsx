@@ -169,7 +169,6 @@ export default function SDMilkMile() {
       <div className="nav-links">{pages.map(item =>
         <a key={item.id} href={'#' + item.id} aria-current={page === item ? 'page' : undefined}>{item.label}</a>
       )}</div>
-      <a className="button nav-register" href={raceUrl} onClick={openRegistration}>Register</a>
     </nav></header>
     <main><View /></main>
     <footer><strong>SD Milk Mile Association</strong><div><a href={instagram}>Instagram ↗</a><a href="https://youtu.be/DXD_yoVHPec">YouTube ↗</a></div></footer>
