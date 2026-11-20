@@ -1,6 +1,7 @@
 import { useEffect, useSyncExternalStore } from 'react';
 import RaceUpdates from './RaceUpdates';
 import './race.css';
+import milkMileRunner from './assets/milk-mile-runner.webp';
 import paymentPhoto from './assets/race-payment.webp';
 import ticketPhoto from './assets/race-ticket.webp';
 import checkInPhoto from './assets/bib-pickup.webp';
@@ -67,9 +68,13 @@ function Cover() {
         </div>
       </section>
       <a className="results-strip" href="#results"><strong>Results</strong><span>2026 winner · {seasons[0].runners[0][0]} · {seasons[0].runners[0][2]}</span><b aria-hidden="true">→</b></a>
-      <section className="wrap about" id="about"><h2>The milk mile</h2>
-        <p>Drink a serving of milk, run a lap, and repeat four times. High school and college runners from across San Diego line up for the mile. The first three finishers take home medals.</p>
-        <p>The second annual summer race raised $350 for Ronald McDonald House Charities.</p>
+      <section className="wrap about" id="about">
+        <div>
+          <h2>The milk mile</h2>
+          <p>Drink a serving of milk, run a lap, and repeat four times. High school and college runners from across San Diego line up for the mile. The first three finishers take home medals.</p>
+          <p>The second annual summer race raised $350 for Ronald McDonald House Charities.</p>
+        </div>
+        <img className="about-photo" src={milkMileRunner} alt="Runner wearing bib 007 drinking milk during the race" loading="lazy" width="720" height="891" />
       </section>
   </>;
 }
