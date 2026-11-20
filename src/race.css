@@ -132,3 +132,9 @@ main { flex: 1; }
   .nav-links { order: 1; width: 100%; justify-content: space-between; }
   .nav-links a { padding: .45rem 0; }
 }
+
+.fundraising { flex: 0 0 100%; border-top: 1px solid #59625a; padding-top: 1.2rem; }
+.fundraising h2 { font-size: 1.25rem; letter-spacing: -.025em; }
+.fundraising p { margin: .6rem 0; }
+.fundraising strong { display: block; color: var(--lime); font-size: clamp(2.25rem, 5vw, 4rem); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.fundraising small { color: #d9ded9; }

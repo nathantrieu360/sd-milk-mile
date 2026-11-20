@@ -1,5 +1,6 @@
 import { useEffect, useSyncExternalStore } from 'react';
 import RaceUpdates from './RaceUpdates';
+import Fundraising from './Fundraising';
 import './race.css';
 import milkMileRunner from './assets/milk-mile-runner.webp';
 import paymentPhoto from './assets/race-payment.webp';
@@ -115,6 +116,7 @@ function RaceInfo() {
           <p className="entry-charity">Your full $22.50 entry fee goes to Ronald McDonald House Charities. We cover processing fees.</p>
           <a className="text-link" href={instagram}>Follow race updates ↗</a>
         </div>
+        <Fundraising />
         <div className="registration-guide">
           <h3>How registration works</h3>
           <ol>{registrationSteps.map(({ photo, title, detail }) =>
