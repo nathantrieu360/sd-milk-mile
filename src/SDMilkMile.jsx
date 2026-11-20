@@ -56,19 +56,21 @@ export default function SDMilkMile() {
   return <>
     <header><nav aria-label="Main navigation">
       <a className="brand" href="#top"><img src={logo} alt="" />SD Milk Mile</a>
-      <div className="nav-links"><a href="#leaderboard">Results</a><a href="#gallery">Photos</a><a href="#next">2027 race</a></div>
+      <div className="nav-links"><a href="#leaderboard">Results</a><a href="#gallery">Photos</a><a className="button" href={raceUrl} onClick={openRegistration}>Register</a></div>
     </nav></header>
     <main id="top">
       <section className="hero" aria-labelledby="race-title">
+        <div className="race-photo"><img src={racing} alt="Runner rounding the track at the SD Milk Mile" fetchpriority="high" /></div>
+        <div className="track-lanes" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="label">San Diego Milk Mile Association</p>
-          <h1 id="race-title">SD Milk<br/><em>Mile.</em></h1>
-          <p className="distance">4 laps <span>/</span> 4 milks <span>/</span> 1 mile</p>
-          <p className="charity-notice"><strong>100% of race fees</strong> go to charity.</p>
-          <div className="actions"><a className="button" href="#leaderboard">Race results ↓</a><a className="text-link" href="#next">2027 race info</a></div>
+          <h1 id="race-title" aria-label="SD Milk Mile">SD<br />Milk<br />Mile</h1>
+          <p className="hero-date"><time dateTime="2027-06-19">June 19, 2027</time></p>
+          <p className="label">6 PM · 4S Ranch</p>
+          <div className="actions"><a className="button" href={raceUrl} onClick={openRegistration}>Register · $22.50 →</a><a className="text-link" href="#next">Race info</a></div>
+          <p className="charity-notice">100% of race fees go to charity.</p>
         </div>
-        <div className="race-photo"><img src={racing} alt="Milk Mile runner taking the curve on a red track" /></div>
       </section>
+      <a className="results-strip" href="#leaderboard"><strong>Results</strong><span>2026 winner · {seasons[0].runners[0][0]} · {seasons[0].runners[0][2]}</span><b aria-hidden="true">→</b></a>
       <section className="recap" id="event" aria-label="2026 race recap">
         <div><span>2026 race recap</span><strong>June 23 · Village Green Park</strong></div>
         <div><span>Field size</span><strong>20 runners</strong></div>
