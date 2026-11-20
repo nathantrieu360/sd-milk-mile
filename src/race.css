@@ -55,7 +55,7 @@ h1, h2, h3, caption { font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
 .recap strong { margin-top: .25rem; }
 .wrap { width: min(90%, 1240px); margin: auto; padding: clamp(3rem, 6vw, 6rem) 0; }
 h2 { font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 1; }
-.boards, .about { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 3rem); }
+.boards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 3rem); }
 .boards { margin-top: 2rem; }
 table { width: 100%; border-collapse: collapse; background: #fffefa; }
 caption { text-align: left; background: var(--ink); color: white; font-size: 1.5rem; padding: .75rem 1rem; letter-spacing: -.035em; }
@@ -75,7 +75,7 @@ td small, th small { font: 400 .8rem/1.5 Arial, sans-serif; }
 .registration-actions .text-link { font-size: .85rem; }
 .race-schedule { margin-top: .7rem; font-weight: 700; }
 .next .next-details { margin-top: .4rem; font-size: .9rem; }
-.next h2 { margin-top: .35rem; }
+.next .page-title { margin-top: .35rem; }
 .registration-guide { flex: 0 0 100%; border-top: 1px solid #59625a; padding-top: 1.2rem; margin-top: .5rem; }
 .registration-guide h3 { font-size: 1.25rem; letter-spacing: -.025em; }
 .registration-guide ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; margin: 0; padding: 0; list-style: none; }
@@ -95,7 +95,7 @@ h3 { font-size: 1.65rem; margin-bottom: .8rem; }
 iframe { border: none; width: 100%; aspect-ratio: 16/9; }
 footer { background: var(--ink); color: white; flex-wrap: wrap; }
 @media (max-width: 700px) {
-  .boards, .about { grid-template-columns: 1fr; }
+  .boards { grid-template-columns: 1fr; }
   .race-photo { inset: 0 -10% 0 0; }
   .race-photo img { object-position: 53% 26%; }
   .recap, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -115,3 +115,17 @@ footer { background: var(--ink); color: white; flex-wrap: wrap; }
 .sms-controls button { cursor: pointer; }
 .sms-controls button[type=button] { background: none; color: white; border: 0; text-decoration: underline; }
 .sms-box p:not(:empty) { margin-top: .65rem; }
+
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; }
+.page-title { font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 1; }
+.nav-links a[aria-current="page"] { color: var(--lime); text-decoration: underline; text-underline-offset: .45em; }
+.media-title { margin-bottom: .85rem; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.highlights { padding-top: 0; }
+.highlights iframe { max-width: 50rem; }
+@media (max-width: 700px) {
+  nav { flex-wrap: wrap; row-gap: .55rem; }
+  .nav-links { order: 1; width: 100%; justify-content: space-between; }
+  .nav-links a { padding: .45rem 0; }
+  .nav-register { padding: .5rem .8rem; }
+}
